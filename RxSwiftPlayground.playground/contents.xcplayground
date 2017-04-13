@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios'>
+    <pages>
+        <page name='Template'/>
+        <page name='zip'/>
+        <page name='ConcatCacheDatabaseNetwork'/>
+        <page name='Interval'/>
+        <page name='Combine'/>
+    </pages>
+</playground>

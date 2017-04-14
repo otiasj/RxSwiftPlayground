@@ -3,7 +3,7 @@
 import Foundation
 import RxSwift
 
-print("interval start")
+print("interval: create an Observable that emits a sequence of integers spaced by a given time interval")
 
 let emitTime = 0.3
 
@@ -12,7 +12,5 @@ let subscription = Observable<Int>.interval(emitTime, scheduler: MainScheduler.i
     .subscribe { event in
         print(event)
 }
-
-print("interval end")
 
 playgroundTimeLimit(seconds: 10)

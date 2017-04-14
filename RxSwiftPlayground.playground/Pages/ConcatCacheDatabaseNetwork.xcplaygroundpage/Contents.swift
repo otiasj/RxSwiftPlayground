@@ -3,6 +3,12 @@
 import UIKit
 import RxSwift
 
+
+print ("This demonstrate how to concat 3 observables to emulate loading from cache, database then network.")
+print ("first try obs1, if it emits then just returns")
+print ("else try obs2, if it emits then just returns")
+print ("else try obs3")
+
 var workScheduler: SchedulerType = ConcurrentDispatchQueueScheduler(qos: .default)
 
 let obs1 = Observable<Int>.create { observer in
@@ -56,7 +62,7 @@ let obs3 = obs2.concat(Observable<Int>.create { observer in
 
 obs3.mySubscribe()
 
-//===== with independant observable
+//===== Same logic with slightly different syntax with independant observable
 
 workScheduler = ConcurrentDispatchQueueScheduler(qos: .default)
 

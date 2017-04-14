@@ -5,7 +5,7 @@ import RxSwift
 var workScheduler: SchedulerType = ConcurrentDispatchQueueScheduler(qos: .default)
 
 //the template
-print("Template")
+print("this is a template")
 let obs = Observable<Int>.just(1)
 obs.mySubscribe()
 

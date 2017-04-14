@@ -5,6 +5,8 @@
         <page name='zip'/>
         <page name='ConcatCacheDatabaseNetwork'/>
         <page name='Interval'/>
-        <page name='Combine'/>
+        <page name='LoginPostLogin'/>
+        <page name='Flatmap'/>
+        <page name='Create'/>
     </pages>
 </playground>

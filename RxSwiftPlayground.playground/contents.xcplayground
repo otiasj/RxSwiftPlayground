@@ -8,5 +8,11 @@
         <page name='LoginPostLogin'/>
         <page name='Flatmap'/>
         <page name='Create'/>
+        <page name='testUnityCoords'/>
+        <page name='DebounceThrottle'/>
+        <page name='BehaviorSubject'/>
+        <page name='ReplaySubject'/>
+        <page name='PublishSubject'/>
+        <page name='Merge'/>
     </pages>
 </playground>

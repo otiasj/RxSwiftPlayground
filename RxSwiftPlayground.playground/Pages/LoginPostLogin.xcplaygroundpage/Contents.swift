@@ -51,18 +51,22 @@ let obs5 = anotherObservable()
 let postLoginRequestObservable = Observable<String>.zip(obs1, obs2, obs3, obs4, obs5.load()) { (obs1Result, obs2Result, obs3Result, obs4Result, obs5Result) in
     
     //All the observable have completed, here are the results:
-    let zipResult = "ziped result = \(obs1Result), \(obs2Result), \(obs3Result), \(obs4Result), \(obs5Result))"
+    let zipResult = "ziped result = \(obs1Result), \(obs2Result), \(obs3Result), \(obs4Result), \(obs5Result)"
     
     return zipResult
 }
 
 
-login.flatMap { (myLoginResult) -> Observable<String> in
+let loginFlowObs = login.flatMap { (myLoginResult) -> Observable<String> in
     print("login is done, lets do postLogin operations")
     obs5.setLoginResult(loginResult: myLoginResult)
     
     return postLoginRequestObservable
-    }.mySubscribe()
+    }
+    
+loginFlowObs
+    //.map { result in print(result.characters.count) }
+    .mySubscribe()
 
 
 //at bottom

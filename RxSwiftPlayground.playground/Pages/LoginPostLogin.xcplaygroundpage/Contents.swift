@@ -41,7 +41,7 @@ class anotherObservable {
 //4 operations to be done parallely after login
 let obs1 = Observable<Int>.just(1)
 let obs2 = Observable<String>.just("someString")
-let obs3 = Observable<Void>.just()
+let obs3 = Observable<Void>.empty()
 let obs4 = Observable<Bool>.just(true)
 
 //another operation to be done parallely after login, but dependant on login received result
